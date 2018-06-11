@@ -8,6 +8,7 @@ mod engine;
 mod error;
 mod ffi;
 mod scan_settings;
+pub mod version;
 
 pub use engine::*;
 pub use error::*;
