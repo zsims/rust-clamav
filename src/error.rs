@@ -5,7 +5,7 @@ use std::str;
 use ffi;
 
 /// An error indicating a clam failure.
-#[derive(Clone, PartialEq, Eq, Debug)]
+#[derive(Clone, PartialEq, Eq)]
 pub struct ClamError {
     code: i32,
 }
@@ -32,6 +32,12 @@ impl ClamError {
 impl fmt::Display for ClamError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "cl_error {}: {}", self.code, self.string_error())
+    }
+}
+
+impl fmt::Debug for ClamError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.to_string())
     }
 }
 
