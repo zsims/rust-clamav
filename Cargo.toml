@@ -1,10 +1,19 @@
 [package]
 name = "clamav"
+description = "clamav bindings for Rust"
 version = "0.1.0"
 authors = ["Zachary Sims <zac@icebergdefender.com>"]
+homepage = "https://github.com/icebergdefender/rust-clamav"
+repository = "https://github.com/icebergdefender/rust-clamav"
+license = "MIT"
+license-file = "LICENSE"
+categories = ["external-ffi-bindings"]
+exclude = [
+    "test_data/*"
+]
 
 [dependencies]
-libc = "*"
+libc = "~0.2.42"
 
 [dev-dependencies]
 tempfile = "3"
