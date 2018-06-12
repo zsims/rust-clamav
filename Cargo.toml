@@ -5,3 +5,6 @@ authors = ["Zachary Sims <zac@icebergdefender.com>"]
 
 [dependencies]
 libc = "*"
+
+[dev-dependencies]
+tempfile = "3"
