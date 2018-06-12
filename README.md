@@ -13,6 +13,8 @@ The low-level C API is wrapped in idomatic and safe Rust code.
 
  - [crates.io documentation](https://docs.rs/clamav/)
 
+[https://github.com/rust-lang-nursery/rust-bindgen](bindgen) is not used to generate `src/ffi.rs` as the libclamav interface is relatively straight forward. This may change in future.
+
 # Requirements
 
 ## Rust
