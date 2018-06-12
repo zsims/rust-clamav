@@ -4,7 +4,11 @@ rust:
   - beta
   - nightly
 before_install:
-  - sudo apt-get install -y clamav
+  - sudo apt-get install -y libclamav7 clamav-freshclam
+  # Stop freshclam running automatically
+  - sudo dpkg-reconfigure clamav-freshclam
+  # Run now so we know it's up to date
+  - sudo freshclam -v
 script:
   - cargo build --verbose
   - cargo test --verbose
